@@ -1,0 +1,67 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Trebuchet MS", sans-serif;
+}
+
+body {
+  background-color: gray;
+}
+
+nav {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 1em;
+}
+
+h1 {
+  text-align: center;
+}
+
+button {
+  border: none;
+  background: none;
+  border-left: 5px solid black;
+  width: 10em;
+  text-align: justify;
+}
+
+button,
+.toggleMenu {
+  padding: 0.5em;
+}
+button:focus,
+.toggleMenu:focus {
+  outline: none;
+}
+
+ul {
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transform: translateX(0%) rotateY(-90deg);
+          transform: translateX(0%) rotateY(-90deg);
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+}
+
+li {
+  list-style: none;
+}
+
+input[type=radio] {
+  cursor: pointer;
+  margin-right: 1em;
+}
+
+input:focus {
+  outline: none;
+}
+
+.active {
+  -webkit-transform: translateX(0%) rotateY(0deg);
+          transform: translateX(0%) rotateY(0deg);
+}
+/*# sourceMappingURL=style.css.map */
