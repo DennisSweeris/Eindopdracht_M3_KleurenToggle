@@ -6,22 +6,11 @@ const radioButtons = document.getElementsByName("colors");
 const background = document.querySelector(".background");
 const buttons = document.querySelectorAll(".btn");
 
-// Dropdown Menu handler
-toggleMenuBtn.addEventListener("click", () => {
-  menuList.classList.toggle("active");
-});
-
 // Listeners
+toggleMenuBtn.addEventListener("click", () => menuList.classList.toggle("active"));
 document.addEventListener("keydown", changeColor);
-radioButtons.forEach(radiobtn => {
-  radiobtn.addEventListener("click", () => {
-    menuList.classList.remove("active");
-  });
-});
-
-buttons.forEach(btn => {
-  btn.addEventListener("mouseover", changeColor);
-});
+radioButtons.forEach(radiobtn => radiobtn.addEventListener("click", () => menuList.classList.remove("active")));
+buttons.forEach(btn => btn.addEventListener("mouseover", changeColor));
 
 function changeColor(e) {
   let value = e.target.value;
