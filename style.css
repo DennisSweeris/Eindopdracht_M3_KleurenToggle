@@ -4,21 +4,25 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: "Trebuchet MS", sans-serif;
+  overflow: hidden;
 }
 
 body {
+  height: 100vh;
+  width: 100vw;
   background-color: gray;
 }
 
 nav {
-  height: 100%;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
   margin: 1em;
 }
 
 h1 {
-  text-align: center;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 button {
@@ -30,11 +34,13 @@ button {
 }
 
 button,
-.toggleMenu {
+.toggleMenu,
+input {
   padding: 0.5em;
 }
 button:focus,
-.toggleMenu:focus {
+.toggleMenu:focus,
+input:focus {
   outline: none;
 }
 
@@ -46,18 +52,39 @@ ul {
   -webkit-transition: 300ms ease-in-out;
   transition: 300ms ease-in-out;
 }
-
-li {
+ul li {
   list-style: none;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-transition: 300ms ease-out;
+  transition: 300ms ease-out;
+}
+ul li:nth-child(1):hover {
+  background-color: red;
+}
+ul li:nth-child(2):hover {
+  background-color: orange;
+}
+ul li:nth-child(3):hover {
+  background-color: yellow;
+}
+ul li:nth-child(4):hover {
+  background-color: green;
+}
+ul li:nth-child(5):hover {
+  background-color: blue;
+}
+ul li:nth-child(6):hover {
+  background-color: indigo;
+}
+ul li:nth-child(7):hover {
+  background-color: violet;
 }
 
 input[type=radio] {
   cursor: pointer;
   margin-right: 1em;
-}
-
-input:focus {
-  outline: none;
 }
 
 .active {

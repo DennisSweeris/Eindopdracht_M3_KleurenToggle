@@ -3,20 +3,24 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Trebuchet MS", sans-serif;
+  overflow: hidden;
 }
+
 body {
+  height: 100vh;
+  width: 100vw;
   background-color: gray;
 }
 
 nav {
-  height: 100%;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
   margin: 1em;
 }
 
 h1 {
-  text-align: center;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 button {
@@ -28,7 +32,8 @@ button {
 }
 
 button,
-.toggleMenu {
+.toggleMenu,
+input {
   padding: 0.5em;
   &:focus {
     outline: none;
@@ -39,19 +44,37 @@ ul {
   transform-origin: left;
   transform: translateX(0%) rotateY(-90deg);
   transition: 300ms ease-in-out;
-}
-
-li {
-  list-style: none;
+  li {
+    list-style: none;
+    width: fit-content;
+    transition: 300ms ease-out;
+    &:nth-child(1):hover {
+      background-color: red;
+    }
+    &:nth-child(2):hover {
+      background-color: orange;
+    }
+    &:nth-child(3):hover {
+      background-color: yellow;
+    }
+    &:nth-child(4):hover {
+      background-color: green;
+    }
+    &:nth-child(5):hover {
+      background-color: blue;
+    }
+    &:nth-child(6):hover {
+      background-color: indigo;
+    }
+    &:nth-child(7):hover {
+      background-color: violet;
+    }
+  }
 }
 
 input[type="radio"] {
   cursor: pointer;
   margin-right: 1em;
-}
-
-input:focus {
-  outline: none;
 }
 
 .active {

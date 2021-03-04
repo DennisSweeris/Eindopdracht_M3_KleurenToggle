@@ -8,15 +8,17 @@ const buttons = document.querySelectorAll(".btn");
 
 // Listeners
 toggleMenuBtn.addEventListener("click", () => menuList.classList.toggle("active"));
+radioButtons.forEach(radiobtn => {
+  radiobtn.addEventListener("click", changeColor);
+  radiobtn.addEventListener("click", () => menuList.classList.remove("active"));
+});
 document.addEventListener("keydown", changeColor);
-radioButtons.forEach(radiobtn => radiobtn.addEventListener("click", () => menuList.classList.remove("active")));
-buttons.forEach(btn => btn.addEventListener("mouseover", changeColor));
 
 function changeColor(e) {
   let value = e.target.value;
   let keyCode = e.keyCode;
-  if (e.target.type === "button") {
-    changeText.innerHTML = `Background: ${value}`;
+  if (e.target.type === "radio") {
+    changeText.innerHTML = `${value}`;
     background.style.background = `${value}`;
   }
   switch ((keyCode = e.keyCode)) {
@@ -45,5 +47,5 @@ function changeColor(e) {
       background.style.background = `violet`;
       break;
   }
-  changeText.innerHTML = `Background: ${background.style.background}`;
+  changeText.innerHTML = `${background.style.background}`.toUpperCase();
 }
