@@ -5,53 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>KleurenToggle</title>
-    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./disc/css/style.css" />
   </head>
 
-  <body class="background">
+  <body>
     <nav>
-      <header class="toggleMenu">
-        <input type="image" class="hamburger" src="./Hamburger_icon.png" height="75" />
-        <ul class="menuList">
-          <li>
-            <button class="btn" type="button" value="red" name="button">
-              <input type="radio" name="colors" value="red" />Red
-            </button>
-          </li>
-          <li>
-            <button class="btn" type="button" value="orange">
-              <input type="radio" name="colors" value="orange" />Orange
-            </button>
-          </li>
-          <li>
-            <button class="btn" type="button" value="yellow">
-              <input type="radio" name="colors" value="yellow" />Yellow
-            </button>
-          </li>
-          <li>
-            <button class="btn" type="button" value="green">
-              <input type="radio" name="colors" value="green" />Green
-            </button>
-          </li>
-          <li>
-            <button class="btn" type="button" value="blue">
-              <input type="radio" name="colors" value="blue" />Blue
-            </button>
-          </li>
-          <li>
-            <button class="btn" type="button" value="indigo">
-              <input type="radio" name="colors" value="indigo" />Indigo
-            </button>
-          </li>
-          <li>
-            <button class="btn" type="button" value="violet">
-              <input type="radio" name="colors" value="violet" />Violet
-            </button>
-          </li>
-        </ul>
+      <header>
+        <input type="image" class="toggleMenu" src="./disc/img/Hamburger_icon.png" height="75" />
+        <span class="displayText">Pick a color</span>
       </header>
+      <ul class="menuList">
+        <li>
+          <button type="button" value="red">
+            <input type="radio" name="colors" value="red" />Red
+          </button>
+        </li>
+        <li>
+          <button type="button" value="orange">
+            <input type="radio" name="colors" value="orange" />Orange
+          </button>
+        </li>
+        <li>
+          <button type="button" value="yellow">
+            <input type="radio" name="colors" value="yellow" />Yellow
+          </button>
+        </li>
+        <li>
+          <button type="button" value="green">
+            <input type="radio" name="colors" value="green" />Green
+          </button>
+        </li>
+        <li>
+          <button type="button" value="blue">
+            <input type="radio" name="colors" value="blue" />Blue
+          </button>
+        </li>
+        <li>
+          <button type="button" value="indigo">
+            <input type="radio" name="colors" value="indigo" />Indigo
+          </button>
+        </li>
+        <li>
+          <button type="button" value="violet">
+            <input type="radio" name="colors" value="violet" />Violet
+          </button>
+        </li>
+        <li>
+          <button type="button" value="RANDOM">
+            <input type="radio" name="colors" value="RANDOM" />RANDOM
+          </button>
+        </li>
+      </ul>
     </nav>
-    <h1 class="myText">Choose your background color</h1>
-    <script defer src="script.js"></script>
+    <footer>
+      <ul class="media-links">
+        <li>
+          <a href="https://github.com/DennisSweeris" target="_blank"
+            ><i class="fab fa-github"></i
+          ></a>
+        </li>
+      </ul>
+    </footer>
+    <script defer src="./disc/js/script.js"></script>
   </body>
 </html>

@@ -1,0 +1,5 @@
+@mixin menuToggle {
+  transform-origin: top;
+  transform: translateX(0%) rotateX(-90deg);
+  transition: 300ms ease-in-out;
+}
