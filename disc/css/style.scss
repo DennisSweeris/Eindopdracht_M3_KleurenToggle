@@ -1,15 +1,33 @@
 @import "./animations";
-@import "./reset.scss";
+
+//RESET
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+// COLORS
+$backgroundColor: #000;
+$gradientColor: linear-gradient(
+  90deg,
+  rgba(0, 0, 0, 1) 0%,
+  rgba(255, 255, 255, 1) 50%,
+  rgba(0, 0, 0, 1) 100%
+);
 
 body {
-  background-color: gray;
-  height: 100vh;
-  width: 100vw;
+  background: gray;
   display: flex;
   flex-direction: column;
 }
 
 nav {
+  font-size: 2rem;
   width: 100%;
   flex-direction: column;
   justify-content: center;
@@ -18,7 +36,7 @@ nav {
 
 header {
   display: flex;
-  background: black;
+  background: $backgroundColor;
   color: white;
   justify-content: flex-start;
   & > span {
@@ -54,7 +72,6 @@ input {
     border: none;
     background: none;
     border-left: 0.4rem solid black;
-    width: 10rem;
     text-align: justify;
   }
   li {
@@ -67,21 +84,4 @@ input {
   transform: translateX(0%) rotateY(0deg);
 }
 
-footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  background-color: black;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 2rem;
-  transform: scale(1.5);
-  li i {
-    padding: 1rem;
-    &:hover {
-      filter: invert(1);
-    }
-  }
-}
+@import "./footer";

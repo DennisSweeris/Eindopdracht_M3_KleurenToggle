@@ -4,12 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>KleurenToggle</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
     />
     <link rel="stylesheet" href="./disc/css/style.css" />
+    <script defer src="./disc/js/script.js"></script>
+    <title>KleurenToggle</title>
   </head>
 
   <body>
@@ -20,9 +21,7 @@
       </header>
       <ul class="menuList">
         <li>
-          <button type="button" value="red">
-            <input type="radio" name="colors" value="red" />Red
-          </button>
+          <button type="button" value="red"><input type="radio" name="colors" value="red" />Red</button>
         </li>
         <li>
           <button type="button" value="orange">
@@ -35,14 +34,10 @@
           </button>
         </li>
         <li>
-          <button type="button" value="green">
-            <input type="radio" name="colors" value="green" />Green
-          </button>
+          <button type="button" value="green"><input type="radio" name="colors" value="green" />Green</button>
         </li>
         <li>
-          <button type="button" value="blue">
-            <input type="radio" name="colors" value="blue" />Blue
-          </button>
+          <button type="button" value="blue"><input type="radio" name="colors" value="blue" />Blue</button>
         </li>
         <li>
           <button type="button" value="indigo">
@@ -62,14 +57,21 @@
       </ul>
     </nav>
     <footer>
-      <ul class="media-links">
+      <div class="footer-info">
+        <p>Copyright © 2021 Dennis Sweeris</p>
+      </div>
+      <ul>
         <li>
-          <a href="https://github.com/DennisSweeris" target="_blank"
-            ><i class="fab fa-github"></i
-          ></a>
+          <a href="https://linkedin.com/DennisSweeris" target="_blank" rel="noreferrer">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/DennisSweeris" target="_blank" rel="noreferrer">
+            <i class="fab fa-github"></i>
+          </a>
         </li>
       </ul>
     </footer>
-    <script defer src="./disc/js/script.js"></script>
   </body>
 </html>
